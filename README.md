@@ -1,60 +1,20 @@
-# 📊 MySQL Fundamentals & Data Querying Tutorial
-
-Welcome to my SQL learning repository! This project showcases a structured collection of fundamental SQL scripts focused on data retrieval, filtering, aggregation, and conditional sorting using **MySQL** and **MySQL Workbench**.
-
----
-
-## 📌 Topics & Concepts Covered
-
-### 1. 🔍 Basic Querying (`Select Statement Tutorial.sql`)
-Demonstrates core data retrieval techniques:
-* **`SELECT *`**: Fetching complete datasets from target tables.
-* **Column Arithmetic**: Performing mathematical operations on numerical fields (e.g., `(age + 10) * 10 + 10 / 10`).
-* **`DISTINCT`**: Eliminating duplicate entries to retrieve unique value combinations.
-
-### 2. 🎯 Data Filtering (`Where Clause in MySQL.sql`)
-Filtering rows based on specific business conditions:
-* **Comparison Operators**: Using `=`, `!=`, `>`, `<`, `>=`, and `<=` to isolate relevant records.
-* **Logical Operators**: Combining multiple criteria with `AND`, `OR`, and `NOT`, including bracket hierarchy `()` for complex logic.
-* **Pattern Matching (`LIKE`)**: Applying wildcards (`%` for multiple characters, `_` for exact character counts) for string searches.
-
-### 3. 📈 Aggregation & Sorting (`Group By + Order By in MySQL.sql`)
-Summarizing dataset metrics and ordering outputs:
-* **`GROUP BY`**: Categorizing data across key dimensions (e.g., `gender`, `occupation`).
-* **Aggregate Functions**: Calculating summary statistics using `AVG()`, `MAX()`, `MIN()`, `SUM()`, and `COUNT()`.
-* **`ORDER BY`**: Sorting query results in `ASC` (default) or `DESC` order across single or multiple columns.
-
-### 4. ⚡ Advanced Filtering (`Having vs Where in MySQL.sql`)
-Distinguishing between row-level pre-filtering and group-level post-filtering:
-* **`WHERE`**: Filters individual records **before** data aggregation occurs.
-* **`HAVING`**: Filters summary groups **after** aggregation functions are evaluated (e.g., `HAVING AVG(age) > 40`).
-
----
-
-## 🛠️ Tools & Environment
-
-* **Database Engine:** MySQL 8.0+
-* **IDE / Client:** MySQL Workbench
-* **Sample Schema:** `parks_and_recreation`
-* **Target Tables:** `employee_demographics`, `employee_salary`
-
----
-
 ## 📁 Repository Script Index
 
-| File Name | Key Learning Focus |
-| :--- | :--- |
-| 📄 `Select Statement Tutorial.sql` | `SELECT` basics, Column Arithmetic, `DISTINCT` |
-| 📄 `Where Clause in MySQL.sql` | `WHERE` filtering, Logical Operators, Pattern Matching (`LIKE`) |
-| 📄 `Group By + Order By in MySQL.sql` | Data Aggregation (`AVG`, `SUM`, `COUNT`), Result Sorting (`ORDER BY`) |
-| 📄 `Having vs Where in MySQL.sql` | Differences between row-level (`WHERE`) and aggregate (`HAVING`) filters |
-
----
-
-## 💡 Key Takeaway
-
-> **Execution Order Rule:**  
-> The `WHERE` clause cannot evaluate aggregate functions directly (e.g., `WHERE AVG(salary) > 50000` causes an error). Always use `HAVING` to apply logical conditions to aggregated metric calculations.
-> 
-> **Standard Query Execution Flow:**  
-> `FROM` ➡️ `WHERE` ➡️ `GROUP BY` ➡️ `HAVING` ➡️ `SELECT` ➡️ `ORDER BY`
+| # | File Name | Key Learning Focus |
+| :-: | :--- | :--- |
+| 1 | 📄 `Select Statement Tutorial.sql` | `SELECT` basics, Column Arithmetic, `DISTINCT` |
+| 2 | 📄 `Where Clause in MySQL.sql` | `WHERE` filtering, Logical Operators, Pattern Matching (`LIKE`) |
+| 3 | 📄 `Group By + Order By in MySQL.sql` | Data Aggregation (`AVG`, `SUM`, `COUNT`), Result Sorting (`ORDER BY`) |
+| 4 | 📄 `Having vs Where in MySQL.sql` | Differences between row-level (`WHERE`) and aggregate (`HAVING`) filters |
+| 5 | 📄 `Limit + Aliasing in MySQL.sql` | Output row limiting (`LIMIT`), column renaming & filtering with aliases (`AS`) |
+| 6 | 📄 `Joins in MySQL.sql` | Table relationships (`INNER JOIN`, `RIGHT JOIN`), Self Joins, and multi-table joining |
+| 7 | 📄 `Unions in MySQL.sql` | Combining queries with `UNION` / `UNION ALL`, conditional row labeling, and global sorting |
+| 8 | 📄 `String Functions in MySQL.sql` | Text formatting (`UPPER`/`LOWER`), trimming, extraction (`SUBSTRING`), searching, and concatenation (`CONCAT`) |
+| 9 | 📄 `Case Statements in MySQL.sql` | Conditional logic (`CASE WHEN`), value categorization, and dynamic pay/bonus calculations |
+| 10 | 📄 `Subqueries in MySQL.sql` | Nested queries in `WHERE`, scalar subqueries in `SELECT`, and derived tables in `FROM` |
+| 11 | 📄 `Window Functions in MySQL.sql` | Partitioning (`OVER`), running totals, and positional ranking (`ROW_NUMBER`, `RANK`, `DENSE_RANK`) |
+| 12 | 📄 `CTEs in MySQL.sql` | `WITH` clause, CTE vs subqueries, column alias overriding, and chaining multiple CTE joins |
+| 13 | 📄 `Temp Tables in MySQL.sql` | `CREATE TEMPORARY TABLE`, manual inserts, CTAS pattern (`CREATE TABLE AS SELECT`), and session isolation |
+| 14 | 📄 `Stored Procedures in MySQL.sql` | `CREATE PROCEDURE`, `DELIMITER`, multi-statement execution (`BEGIN...END`), and parameterized queries (`CALL`) |
+| 15 | 📄 `Triggers and Events in MySQL.sql` | `AFTER INSERT` triggers (`NEW` keyword), scheduled events (`CREATE EVENT`), and `event_scheduler` configuration |
+| 16 | 📄 `Data Cleaning in MySQL.sql` | End-to-end SQL Data Cleaning: Duplicate removal (`ROW_NUMBER`), data standardization (`TRIM`, `STR_TO_DATE`), missing value imputation using Self-Joins, and schema alterations |
